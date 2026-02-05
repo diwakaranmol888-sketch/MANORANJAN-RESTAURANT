@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ADMIN DASHBOARD</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: linear-gradient(180deg,#d4af37,#c0c0c0);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  color: #000;
+}
+
+.sidebar h2 {
+  text-align: center;
+}
+
+.sidebar a {
+  display: block;
+  margin: 15px 0;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main {
+  margin-left: 260px;
+  padding: 20px;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(212,175,55,0.3);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  color: #d4af37;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>ADMIN</h2>
+  <a onclick="showSection('dashboard')">Dashboard</a>
+  <a onclick="showSection('orders')">Orders</a>
+  <a onclick="showSection('payments')">Payments</a>
+  <a onclick="showSection('users')">Users</a>
+</div>
+
+<div class="main">
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" class="card">
+    <h2>Overview</h2>
+    <p>💰 Total Revenue: ₹0</p>
+    <p>📦 Total Orders: 0</p>
+    <p>👥 Total Users: 0</p>
+  </div>
+
+  <!-- ORDERS -->
+  <div id="orders" class="card hidden">
+    <h2>Order History</h2>
+    <table>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer</th>
+        <th>Item</th>
+        <th>Status</th>
+      </tr>
+      
+    </table>
+  </div>
+
+  <!-- PAYMENTS -->
+  <div id="payments" class="card hidden">
+    <h2>Payments</h2>
+    <table>
+      <tr>
+        <th>Txn ID</th>
+        <th>Customer</th>
+        <th>Amount</th>
+        <th>Mode</th>
+      </tr>
+      
+    </table>
+  </div>
+
+  <!-- USERS -->
+  <div id="users" class="card hidden">
+    <h2>Users</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Status</th>
+      </tr>
+     
+    </table>
+  </div>
+
+</div>
+
+<script>
+function showSection(section) {
+  document.querySelectorAll('.card').forEach(div => {
+    div.classList.add('hidden');
+  });
+  document.getElementById(section).classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>

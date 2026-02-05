@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+/* 🔐 ADMIN MODE GOLD–SILVER THEME */
+.admin-only {
+  background: linear-gradient(135deg, #d4af37, #c0c0c0);
+  color: #111;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  font-weight: 600;
+}
+
+.admin-only button {
+  background: linear-gradient(135deg, #000, #333);
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.admin-only button:hover {
+  background: linear-gradient(135deg, #d4af37, #c0c0c0);
+  color: #000;
+}
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <title>MANORANJAN RESTAURANT | Pure Veg</title>
+  <div class="admin-only" style="background:#ffd; padding:10px; margin:10px;">
+  👑 ADMIN MODE ACTIVE
+</div>
+
+ 
+
+
+ 
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Manoranjan Restaurant</h1>
+    <p>Pure Veg | South Indian • North Indian • Chinese</p>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Delicious Veg Food, Delivered Fresh</h2>
+    <a href="https://wa.me/91XXXXXXXXXX" class="btn">Order on WhatsApp</a>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu">
+    <h2>Our Specials</h2>
+
+    <div class="menu-grid">
+      <div class="card">
+        <img src="images/masala-dosa.jpg.png" alt="Masala Dosa">
+        <h3>Masala Dosa</h3>
+        <p>Crispy dosa with spicy potato filling</p>
+      </div>
+
+      <div class="card">
+        <img src="images/pav-bhaji.jpg.png" alt="Pav Bhaji">
+        <h3>Pav Bhaji</h3>
+        <p>Butter-loaded pav with spicy bhaji</p>
+      </div>
+
+      <div class="card">
+        <img src="images/chilli-panner.jpg.png" alt="Chilli Paneer">
+        <h3>Chilli Paneer</h3>
+        <p>Indo-Chinese favourite</p>
+      </div>
+    </div>
+  </section>
+  
+
+<div style="border:2px solid gold;padding:20px;margin:20px;border-radius:15px;">
+  <h3 style="color:gold;">💰 Payment Options</h3>
+  <p style="color:silver;">
+    ✔ UPI Accepted<br>
+    GPay • PhonePe • Paytm<br><br>
+    <b>UPI ID:</b> manoranjan@upi<br>
+    <b>Mobile:</b> 98XXXXXXXX
+  </p>
+  <p style="color:lightgreen;">
+    ✔ Pay after WhatsApp confirmation
+  </p>
+</div>
+
+
+
+
+ 
+<section class="menu">
+  <h2>Our Menu</h2>
+
+  <div class="menu-grid">
+
+    <div class="card">
+      <img 
+  id="img-dosa"
+  src="images/masala-dosa.jpg.png"
+  class="editable-img"
+  onclick="triggerUpload('img-dosa')"
+/>
+
+<input 
+  type="file"
+  id="file-img-dosa"
+  accept="image/*"
+  style="display:none"
+  onchange="changeImage(event,'img-dosa')"
+/>
+
+      <h3>Masala Dosa</h3>
+      <p>Crispy dosa with spicy potato filling</p>
+    </div>
+    <button class="order-btn" onclick="orderNow('Masala Dosa')">
+Order on WhatsApp
+</button>
+
+
+    <div class="card">
+      <img src="images/butter-masala-dosa.jpg.png">
+      <h3>Butter Masala Dosa</h3>
+      <p>Butter dosa with sambhar & chutney</p>
+    </div>
+    <button class="order-btn" onclick="orderNow('Butter Masala dosa')">
+Order on WhatsApp
+</button>
+
+
+    <div class="card">
+      <img src="images/paneer-uttapam.jpg.png">
+      <h3>Paneer Uttapam</h3>
+      <p>Homestyle paneer uttapam</p>
+    </div>
+    <button class="order-btn" onclick="orderNow('Paneer Uttapam')">
+Order on WhatsApp
+</button>
+
+
+    <div class="card">
+      <img src="images/idli-sambhar.jpg.png">
+      <h3>Idli Sambhar</h3>
+      <p>Soft idli with hot sambhar</p>
+    </div>
+    <button class="order-btn" onclick="orderNow('Idli Sambhar')">
+Order on WhatsApp
+</button>
+
+
+    <div class="card">
+      <img src="images/chilli-panner.jpg.png">
+      <h3>Chilli Paneer</h3>
+      <p>Spicy Indo-Chinese paneer</p>
+    </div>
+    <button class="order-btn" onclick="orderNow('Chilli Paneer')">
+Order on WhatsApp
+</button>
+
+
+    <div class="card">
+      <img src="images/veg-manchuriyan.jpg.png">
+      <h3>Veg Manchurian</h3>
+      <p>Veg balls in soy garlic sauce</p>
+    </div>
+    <button class="order-btn" onclick="orderNow('Veg Manchurian')">
+Order on WhatsApp
+</button>
+
+
+    <div class="card">
+      <img src="images/hakka-noodels.jpg.png">
+      <h3>Hakka Noodles</h3>
+      <p>Classic veg noodles</p>
+    </div>
+    <button class="order-btn" onclick="orderNow('Hakka Noodles')">
+Order on WhatsApp
+</button>
+
+
+    <div class="card">
+      <img src="images/veg-fried-rice.jpg.png">
+      <h3>Veg Fried Rice</h3>
+      <p>Rice cooked with fresh vegetables</p>
+    </div>
+    <button class="order-btn" onclick="orderNow('Veg Fried Rice')">
+Order on WhatsApp
+</button>
+
+
+    <div class="card">
+      <img src="images/veg-burger.jpg.png">
+      <h3>Paneer Burger</h3>
+      <p>Paneer patty with fresh veggies</p>
+    </div>
+    <button class="order-btn" onclick="orderNow('Paneer Burger')">
+Order on WhatsApp
+</button>
+
+
+    <div class="card">
+      <img src="images/rasmalai.jpg.png">
+      <h3>Rasmalai</h3>
+      <p>Soft & creamy dessert</p>
+    </div>
+    <button class="order-btn" onclick="orderNow('Rasmalai')">
+Order on WhatsApp
+</button>
+<script>
+function orderNow(item){
+  window.open(
+    "https://wa.me/91XXXXXXXXXX?text=Hello%20Manoranjan%20Restaurant,%20I%20want%20to%20order:%20"+item,
+    "_blank"
+  );
+}
+</script>
+
+
+
+  </div>
+</section>
+ <!-- FOOTER -->
+  <footer class="footer">
+    <p>📍 Station Road, Unnao, UP</p>
+    <p>© 2026 Manoranjan Restaurant</p>
+  </footer>
+  <div id="welcomePopup" style="
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+">
+
+  <div style="
+    background:black;
+    border:2px solid gold;
+    border-radius:20px;
+    padding:30px;
+    max-width:400px;
+    text-align:center;
+    color:white;
+  ">
+    <h2 style="color:gold;">🙏 Welcome to Manoranjan Restaurant</h2>
+    <p style="color:silver;">
+      100% Pure Veg<br>
+      Fresh • Hygienic • Delicious
+    </p>
+
+    <p style="margin-top:15px;">
+      Thank you for choosing us ❤️  
+      Order easily on WhatsApp
+    </p>
+
+    <button onclick="closeWelcome()" style="
+      margin-top:20px;
+      padding:10px 25px;
+      background:gold;
+      border:none;
+      border-radius:20px;
+      font-weight:bold;
+      cursor:pointer;
+    ">
+      Continue
+    </button>
+  </div>
+
+</div>
+
+<script>
+function closeWelcome(){
+  document.getElementById("welcomePopup").style.display="none";
+  localStorage.setItem("welcomeShown","yes");
+}
+
+window.onload = function(){
+  if(localStorage.getItem("welcomeShown")){
+    document.getElementById("welcomePopup").style.display="none";
+  }
+}
+</script>
+<div style="
+  margin-top:60px;
+  padding:40px 20px;
+  background:linear-gradient(135deg, #000000, #1a1a1a);
+  border-top:3px solid gold;
+  text-align:center;
+">
+  <h1 style="
+    color:gold;
+    font-size:36px;
+    margin-bottom:10px;
+    letter-spacing:1px;
+  ">
+    🙏 THANK YOU
+  </h1>
+
+  <p style="
+    color:silver;
+    font-size:20px;
+    line-height:1.6;
+  ">
+    Thank you for visiting <b>Manoranjan Restaurant</b><br>
+    We truly appreciate your support ❤️<br><br>
+    <span style="color:lightgreen;font-weight:bold;">
+      Please come again to our website
+    </span>
+  </p>
+
+  <p style="
+    margin-top:20px;
+    color:gray;
+    font-size:14px;
+  ">
+    100% Pure Veg • Fresh • Hygienic • Delicious
+  </p>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+if (params.get("admin") === "true") {
+  localStorage.setItem("role", "admin");
+}
+
+if (localStorage.getItem("role") !== "admin") {
+  document.querySelectorAll(".admin-only")
+    .forEach(el => el.style.display = "none");
+}
+</script>
+
+</body>
+</html>
+
+
